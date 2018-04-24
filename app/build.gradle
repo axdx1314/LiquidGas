@@ -1,0 +1,128 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+// 依赖插件脚本
+//apply from: 'tinker-support.gradle'
+def Buildconfig = rootProject.ext.android
+def BuildLibray = rootProject.ext.dependencies
+def Buildsigning = rootProject.ext.signing
+
+android {
+    compileSdkVersion Buildconfig["compileSdkVersion"]
+    buildToolsVersion Buildconfig["buildToolsVersion"]
+    defaultConfig {
+        applicationId Buildconfig["applicationId"]
+        minSdkVersion Buildconfig["minSdkVersion"]
+        targetSdkVersion Buildconfig["targetSdkVersion"]
+        versionCode Buildconfig["versionCode"]
+        versionName Buildconfig["versionName"]
+        testInstrumentationRunner Buildconfig["testInstrumentationRunner"]
+        multiDexEnabled true
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+    }
+
+    //检测编译器和运行时错误
+    lintOptions {
+        // 设置为 true， 将使所有release 构建都以issus的严重性级别为fatal（severity=false）的设置来运行lint
+        // 并且，如果发现了致命（fatal）的问题，将会中止构建（由上面提到的 abortOnError 控制）
+        checkReleaseBuilds false
+        // 如果为true，则在发现错误时停止gradle构建
+        abortOnError false
+    }
+
+    //签名的配置
+    signingConfigs {
+
+        release {
+            storeFile file('F:\\bzkey\\liquidGas.jks')//签名文件路径
+            storePassword Buildsigning["CommonPassword"]
+            keyAlias Buildsigning["keyAlias"]
+            keyPassword Buildsigning["CommonPassword"]
+        }
+
+        debug {
+            storeFile file('F:\\bzkey\\liquidGas.jks')//签名文件路径
+            storePassword Buildsigning["CommonPassword"]
+            keyAlias Buildsigning["keyAlias"]
+            keyPassword Buildsigning["CommonPassword"]
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            minifyEnabled false//是否启动混淆
+            zipAlignEnabled false//是否启动zipAlign优化
+            shrinkResources false // 是否移除无用的resource文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug//打包命令行：gradlew assembleRelease
+        }
+
+        release {
+            minifyEnabled true//是否启动混淆
+            zipAlignEnabled true//是否启动zipAlign优化
+            shrinkResources true // 是否移除无用的resource文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release//打包命令行：gradlew assembleRelease
+
+            android {
+                applicationVariants.all { variant ->
+                    variant.outputs.each { output ->
+                        def outputFile = output.outputFile
+                        if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                            File outputDirectory = new File(outputFile.parent);
+                            if (variant.buildType.name == "release") {
+                                //app名称_vnandroid.support.test.runner.AndroidJUnitRunner_vc1_release.apk
+//                                def fileName = "app名称_vn${defaultConfig.versionName}_vc${defaultConfig.versionCode}_release.apk"
+                                //名称LiquidGas_版本v 1.1.1_时间2017-12-26.apk
+                                def fileName = "一团和气_${defaultConfig.versionName}_${releaseTime()}.apk"
+                                output.outputFile = new File(outputDirectory, fileName)
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile BuildLibray["appcompat-v7"]
+    compile BuildLibray["support-v4"]
+    compile BuildLibray["constraint"]
+    compile BuildLibray["junit"]
+    compile BuildLibray["design"]
+    compile BuildLibray["multidex"]
+    compile BuildLibray["butterknife"]
+    annotationProcessor BuildLibray["butterknife-compiler"]
+    compile BuildLibray["cardview"]
+    compile BuildLibray["circleimageview"]
+    //compile BuildLibray["williamchart"]
+    compile BuildLibray["permissiongen"]
+    /** retrofit **/
+    compile BuildLibray["retrofit"]
+    compile BuildLibray["converter-gson"]
+    compile BuildLibray["adapter-rxjava"]
+    compile BuildLibray["converter-scalars"]
+    compile BuildLibray["rxandroid"]
+    //compile BuildLibray["refreshlayout"]
+    /** 腾讯Bugly **/
+    compile BuildLibray["crashreport_upgrade"]
+}
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("GMT"))
+}

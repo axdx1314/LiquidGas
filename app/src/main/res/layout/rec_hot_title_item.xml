@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/hot_line_parets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp2"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/text_types"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:lines="1"
+            android:text="@string/string_type_15"
+            android:textColor="@color/appthemeColor"
+            android:textSize="14sp"
+            tools:targetApi="o" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:lines="1"
+            android:text="型"
+            android:textColor="#555555"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText"
+            tools:targetApi="o" />
+
+        <TextView
+            android:id="@+id/text_bottle_numbers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:lines="1"
+            android:text="@string/zero"
+            android:textColor="@color/appthemeColor"
+            android:textSize="14sp"
+            tools:targetApi="o" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:lines="1"
+            android:text="瓶"
+            android:textColor="#555555"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText"
+            tools:targetApi="o" />
+
+    </LinearLayout>
+
+</LinearLayout>

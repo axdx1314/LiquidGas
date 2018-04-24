@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--主页====运营、咨询、我的选中时变的颜色-->
+    <item android:state_selected="true" android:color="@color/appthemeColor" />
+    <item android:color="@color/textColor" />
+    <!---->
+</selector>

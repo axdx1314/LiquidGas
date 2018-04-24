@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="dialog_color">#A9A9A9</color>
+    <color name="textColor">#333333</color>
+    <color name="textTwoColor">#444444</color>
+    <color name="appthemeColor">#FC6F06</color>
+    <color name="wirteColor">#ffffff</color>
+    <color name="backgroudColor">#f0eff5</color>
+    <color name="linesColor">#d8d8d8</color>
+    <color name="recbaColor">#86fc6f06</color>
+
+    <color name="chart_line_one">#FF3C93FE</color>
+    <color name="chart_line_two">#FFF97006</color>
+    <color name="chart_line_three">#FF9D9D9D</color>
+</resources>

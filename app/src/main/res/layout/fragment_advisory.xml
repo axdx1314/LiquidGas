@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroudColor"
+    android:orientation="vertical"
+    tools:context="com.suchengkeji.android.liquidgas.ui.fragment.AdvisoryFragment">
+
+    <include layout="@layout/my_toolbar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/advisory_rec"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:paddingBottom="@dimen/dp5">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

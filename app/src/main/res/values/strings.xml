@@ -1,0 +1,53 @@
+<resources>
+    <!--<string name="app_name">LiquidGas</string>-->
+    <string name="bye_burger_bottom_behavior">com.suchengkeji.android.liquidgas.ui.listenter.by.ByeBurgerBottomBehavior</string>
+    <string name="bye_burger_float_behavior">com.suchengkeji.android.liquidgas.ui.listenter.by.ByeBurgerFloatButtonBehavior</string>
+    <string name="bye_burger_title_behavior">com.suchengkeji.android.liquidgas.ui.listenter.by.ByeBurgerTitleBehavior</string>
+
+    <string name="app_name">一团和气</string>
+    <string name="string_ok">完成</string>
+    <string name="string_hint_newpass">新密码</string>
+    <string name="string_hint_oldpass">旧密码</string>
+    <string name="string_hint_newpass_ok">确认密码</string>
+    <string name="string_login">登陆</string>
+    <string name="string_operate">运营</string>
+    <string name="string_consultation">咨询</string>
+    <string name="string_sales">销量</string>
+    <string name="string_mine">我的</string>
+    <string name="string_store">门店</string>
+    <string name="string_franchiser">加盟商</string>
+    <string name="string_company">公司</string>
+    <string name="string_loading">加载中…</string>
+    <string name="string_loging">登陆中…</string>
+    <string name="string_change_password">修改密码</string>
+    <string name="string_look_account">查看账户</string>
+    <string name="string_out_app">退出登录</string>
+    <!---->
+    <string name="string_type_5">5KG</string>
+    <string name="string_type_15">15KG</string>
+    <string name="string_type_50">50KG</string>
+    <!---->
+    <string name="string_year">年</string>
+    <string name="string_moth">月</string>
+    <string name="string_day">日</string>
+    <string name="again_out">再按一次退出</string>
+    <string name="pass_notnull">密码不能为空</string>
+    <string name="phone_notnull">账户不能为空</string>
+    <string name="phone_isnot">请输入正确的手机号码</string>
+    <string name="zero">0</string>
+    <string name="string_please_enter_number">请输入账号</string>
+    <string name="string_please_enter_pass">请输入密码</string>
+    <string name="string_phone_modle">Phone-Model</string>
+    <string name="string_version_number">SDK-VersionNumber</string>
+    <string name="string_timeData">time-data</string>
+    <string name="string_single">单</string>
+    <string name="string_type">型</string>
+    <string name="string_bottle">瓶</string>
+    <string name="string_add_last_day">较上日增加</string>
+    <string name="string_toobar_title">toolbarTitle</string>
+    <string name="string_username">UserName</string>
+    <string name="string_check_net_ok">网络不可用</string>
+    <string name="string_yeratoday_add">昨日增加</string>
+    <string name="string_no_internet">网络链接失败!</string>
+
+</resources>

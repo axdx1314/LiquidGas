@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--主活动，承载三个子fragment-->
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroudColor"
+    tools:context="com.suchengkeji.android.liquidgas.MainActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            layout="@layout/my_toolbar"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_behavior="@string/bye_burger_title_behavior" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <com.suchengkeji.android.liquidgas.view.NoScrollViewPager
+        android:id="@+id/viewpager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchorGravity="center">
+
+    </com.suchengkeji.android.liquidgas.view.NoScrollViewPager>
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bye_burger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/wirteColor"
+        app:layout_behavior="@string/bye_burger_bottom_behavior"
+        app:menu="@menu/bottom">
+
+    </android.support.design.widget.BottomNavigationView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatButton"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/image_logo"
+        app:backgroundTint="@color/appthemeColor"
+        tools:ignore="RtlHardcoded" />
+
+
+</android.support.design.widget.CoordinatorLayout>

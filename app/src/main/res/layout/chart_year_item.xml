@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:williamchart="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <!--<com.db.chart.view.LineChartView-->
+    <!--android:visibility="gone"-->
+    <!--android:id="@+id/chart_year"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="220dp"-->
+    <!--android:layout_marginBottom="@dimen/dp15"-->
+    <!--android:layout_marginLeft="@dimen/dp15"-->
+    <!--android:layout_marginRight="@dimen/dp15"-->
+    <!--williamchart:chart_axis="false"-->
+    <!--williamchart:chart_axisBorderSpacing="@dimen/dp15"-->
+    <!--williamchart:chart_labelColor="#6a84c3" />-->
+
+    <ProgressBar
+        android:id="@+id/progress_Bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp3"
+        android:layout_marginTop="-1dp"
+        android:progressDrawable="@drawable/web_view_pg"
+        android:visibility="gone" />
+
+    <WebView
+        android:id="@+id/blog_detail_webview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/wirteColor"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+    </WebView>
+
+
+    <LinearLayout
+        android:id="@+id/web_imges_lines"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="center"
+            android:src="@mipmap/no_net" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/string_no_internet" />
+    </LinearLayout>
+
+
+</LinearLayout>

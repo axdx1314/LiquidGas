@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroudColor"
+    tools:context="com.suchengkeji.android.liquidgas.ui.fragment.tab.CompanyFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp12"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/sales_tables"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:background="@color/wirteColor" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/linesColor" />
+
+        <!--<LinearLayout
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/wirteColor"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp8">
+
+            <LinearLayout
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="@dimen/dp10"
+                    android:background="@color/chart_line_one" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp2"
+                    android:text="@string/string_type_5"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="@dimen/dp10"
+                    android:background="@color/chart_line_two" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp2"
+                    android:text="@string/string_type_15"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="@dimen/dp10"
+                    android:background="@color/chart_line_three" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp2"
+                    android:text="@string/string_type_50"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp14" />
+
+            </LinearLayout>
+
+        </LinearLayout>-->
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/sales_pagers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/wirteColor"
+            android:overScrollMode="never">
+
+        </android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

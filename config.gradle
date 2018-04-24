@@ -1,0 +1,50 @@
+def androidSupportVersion = '25.3.1'
+def dependenciesMultidex = "1.0.0"
+def dependenciesButterknife = "8.8.1"
+
+ext {
+    android = [compileSdkVersion        : 26,
+               buildToolsVersion        : "26.0.2",
+               applicationId            : "com.suchengkeji.android.liquidgas",
+               minSdkVersion            : 21,
+               targetSdkVersion         : 26,
+               versionCode              : 1,
+               versionName              : "1.0",
+               testInstrumentationRunner: "android.support.test.runner.AndroidJUnitRunner"]
+
+    dependencies = ["appcompat-v7"        : "com.android.support:appcompat-v7:${androidSupportVersion}",
+                    "support-v4"          : "com.android.support:support-v4:${androidSupportVersion}",
+                    "constraint"          : "com.android.support.constraint:constraint-layout:1.0.2",
+                    "junit"               : 'junit:junit:4.12',
+                    /***  design包  ***/
+                    "design"              : "com.android.support:design:${androidSupportVersion}",
+                    /***  dex突破65535的限制  ***/
+                    "multidex"            : "com.android.support:multidex:${dependenciesMultidex}",
+                    /***   快速开发辅助   ***/
+                    "butterknife"         : "com.jakewharton:butterknife:${dependenciesButterknife}",
+                    "butterknife-compiler": "com.jakewharton:butterknife-compiler:${dependenciesButterknife}",
+                    /*** 卡片布局 ***/
+                    "cardview"            : "com.android.support:cardview-v7:${androidSupportVersion}",
+                    /*** 圆形图 ***/
+                    "circleimageview"     : "de.hdodenhof:circleimageview:2.1.0",
+                    /*** 刷新加载 ***/
+                    //"materialrefeshlayout": "com.cjj.materialrefeshlayout:library:1.3.0",
+                    //"refreshlayout"       : "cn.bingoogolapple:bga-refreshlayout:1.1.8",
+                    /*** 图表 ***/
+                    //"williamchart"        : "com.diogobernardino:williamchart:2.5.0",
+                    /*** 权限申请 ***/
+                    "permissiongen"       : "com.lovedise:permissiongen:0.1.1",
+                    /*** retrofit ***/
+                    "retrofit"            : "com.squareup.retrofit2:retrofit:2.3.0",
+                    "converter-gson"      : "com.squareup.retrofit2:converter-gson:2.1.0",
+                    "adapter-rxjava"      : "com.squareup.retrofit2:adapter-rxjava:2.1.0",
+                    /*** ConverterFactory的String依赖包 ***/
+                    "converter-scalars"   : "com.squareup.retrofit2:converter-scalars:2.0.0",
+                    "rxandroid"           : "io.reactivex:rxandroid:1.1.0",
+                    /*** 腾讯Bugly ***/
+                    "crashreport_upgrade":"com.tencent.bugly:crashreport_upgrade:latest.release"
+    ]
+
+    signing = [CommonPassword: "w123456",
+               keyAlias      : "liquidGas"]
+}

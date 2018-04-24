@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?><!--登陆-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appthemeColor"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.suchengkeji.android.liquidgas.ui.acticity.LoginActivity">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/image_logo"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginBottom="@dimen/dp30"
+        android:layout_marginLeft="@dimen/dp25"
+        android:layout_marginRight="@dimen/dp25"
+        android:background="@mipmap/image_lowbox"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp25"
+            android:background="@mipmap/image_phone"
+            android:gravity="center"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+        <EditText
+            android:id="@+id/ed_phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edittext_background"
+            android:gravity="center"
+            android:hint="@string/string_please_enter_number"
+            android:inputType="textWebEditText"
+            android:lines="1"
+            android:maxLength="13"
+            android:textColor="@color/wirteColor"
+            android:textColorHint="@color/wirteColor"
+            android:textCursorDrawable="@drawable/edit_bg_cursor_color_thickness"
+            android:textSize="@dimen/sp18"
+            tools:ignore="HardcodedText,LabelFor,TextFields" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginBottom="@dimen/dp40"
+        android:layout_marginLeft="@dimen/dp25"
+        android:layout_marginRight="@dimen/dp25"
+        android:background="@mipmap/image_lowbox"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp25"
+            android:background="@mipmap/image_pass"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+        <EditText
+            android:id="@+id/ed_passtext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edittext_background"
+            android:gravity="center"
+            android:hint="@string/string_please_enter_pass"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLength="12"
+            android:textColor="@color/wirteColor"
+            android:textColorHint="@color/wirteColor"
+            android:textCursorDrawable="@drawable/edit_bg_cursor_color_thickness"
+            android:textSize="@dimen/sp18"
+            tools:ignore="HardcodedText,LabelFor" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginBottom="@dimen/dp40"
+        android:layout_marginLeft="@dimen/dp25"
+        android:layout_marginRight="@dimen/dp25"
+        android:background="@drawable/btn_bg_white_rounded_rectangle"
+        android:text="@string/string_login"
+        android:textColor="@color/appthemeColor"
+        android:textSize="@dimen/sp20" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp20" />
+
+</LinearLayout>

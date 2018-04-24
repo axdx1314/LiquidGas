@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bottom_home"
+        android:enabled="true"
+        android:icon="@mipmap/image_operate_bg"
+        android:title="@string/string_operate"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/bottom_search"
+        android:enabled="true"
+        android:icon="@mipmap/image_advice_bg"
+        android:title="@string/string_consultation"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/bottom_me"
+        android:enabled="true"
+        android:icon="@mipmap/image_mine_bg"
+        android:title="@string/string_mine"
+        app:showAsAction="always" />
+</menu>

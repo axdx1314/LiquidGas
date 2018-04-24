@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.suchengkeji.android.liquidgas">
+
+    <!-- 允许访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许查看当前网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序改变网络状态的开关 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 允许程序访问Wi-Fi网络状态信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序改变WLAN状态的开关 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/image_app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 主页=======包含三个子页面：运营、咨询、我的 -->
+        <!--
+        android:screenOrientation="portrait"===默认竖直屏幕不横屏
+        android:theme="@style/AppThemeNorBar"===默认主题
+        android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+         ==stateAlwaysHidden：当该Activity主窗口获取焦点时，软键盘总是被隐藏的，不管是确认导航到该Activity还是Activity被覆盖后显示出来。
+           adjustPan：该Activity主窗口并不调整屏幕的大小以便留出软键盘的空间。相反，当前窗口的内容将自动移动以便当前焦点从不被键盘覆盖和用户能总是看到输入内容的部分。这个通常是不期望比调整大小，因为用户可能关闭软键盘以便获得与被覆盖内容的交互操作。
+        -->
+        <!-- <activity -->
+        <!-- android:name=".MainActivity" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/AppThemeNorBar" -->
+        <!-- android:windowSoftInputMode="stateAlwaysHidden|adjustPan" /> -->
+        <activity
+            android:name=".NewMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNorBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <!-- 启动页面 -->
+        <activity
+            android:name=".ui.acticity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNorBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 登陆 -->
+        <activity
+            android:name=".ui.acticity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNorBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <!-- 销量页面 -->
+        <activity
+            android:name=".ui.acticity.SalesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNorBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <!-- 修改密码 -->
+        <activity
+            android:name=".ui.acticity.ChangePassWordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNorBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!--Android 7.0之后 Goole官方为了提高Android后台性能以及安全取消了广播的静态注册，动态注册仍然可用-->
+        <!--<receiver-->
+        <!--android:name=".receivers.NetWorkReceiver"-->
+        <!--android:enabled="true"-->
+        <!--android:exported="true"-->
+        <!--android:permission="com.suchengkeji.android.liquidgas.receivers">-->
+        <!--<intent-filter>-->
+        <!--<action-->
+        <!--android:name="android.net.conn.CONNECTIVITY_CHANGE"-->
+        <!--tools:ignore="BatteryLife" />-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+    </application>
+
+</manifest>

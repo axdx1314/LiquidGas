@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--启动界面-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appthemeColor"
+    tools:context="com.suchengkeji.android.liquidgas.ui.acticity.SplashActivity">
+
+
+    <ImageView
+        android:id="@+id/splash_lines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:src="@mipmap/image_logo"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/splash_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLength="30"
+            android:text="@string/app_name"
+            android:textColor="@color/wirteColor"
+            android:textSize="@dimen/sp18"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp50"
+            android:padding="@dimen/dp5"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_margin="@dimen/dp3"
+                android:id="@+id/splash_text_phone_modle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLength="30"
+                android:text="@string/string_phone_modle"
+                android:textColor="@color/wirteColor"
+                android:textSize="@dimen/sp12"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_margin="@dimen/dp3"
+                android:id="@+id/splash_text_version_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLength="30"
+                android:text="@string/string_version_number"
+                android:textColor="@color/wirteColor"
+                android:textSize="@dimen/sp12"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/lines_hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/wirteColor"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingTop="7dp"
+        android:gravity="center"
+        tools:ignore="DisableBaselineAlignment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:padding="@dimen/dp5"
+                android:id="@+id/text_datas"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/string_timeData"
+                android:textColor="#555555"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText"
+                tools:targetApi="o" />
+
+            <LinearLayout
+                android:padding="@dimen/dp5"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/string_sales"
+                    android:textColor="#555555"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+                <TextView
+                    android:id="@+id/text_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/zero"
+                    android:textColor="@color/appthemeColor"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/string_single"
+                    android:textColor="#555555"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/string_yeratoday_add"
+                    android:textColor="#555555"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/text_day_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="0"
+                    android:textColor="@color/appthemeColor"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="单"
+                    android:textColor="#555555"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/line_type_one"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_type_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/zero"
+                    android:textColor="@color/appthemeColor"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/string_type"
+                    android:textColor="#555555"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+                <TextView
+                    android:id="@+id/text_bottle_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/zero"
+                    android:textColor="@color/appthemeColor"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/string_bottle"
+                    android:textColor="#555555"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/line_type_two"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_type_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/zero"
+                    android:textColor="@color/appthemeColor"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/string_type"
+                    android:textColor="#555555"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+                <TextView
+                    android:id="@+id/text_bottle_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/zero"
+                    android:textColor="@color/appthemeColor"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/string_bottle"
+                    android:textColor="#555555"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/line_type_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_type_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/zero"
+                    android:textColor="@color/appthemeColor"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/string_type"
+                    android:textColor="#555555"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+                <TextView
+                    android:id="@+id/text_bottle_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/zero"
+                    android:textColor="@color/appthemeColor"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/string_bottle"
+                    android:textColor="#555555"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--调试部分，无用需删除-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/new_line_hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/wirteColor"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingTop="7dp"
+        tools:ignore="DisableBaselineAlignment">
+
+        <LinearLayout
+            android:id="@+id/title_other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:padding="@dimen/dp5"
+                android:id="@+id/new_text_timedata"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/string_timeData"
+                android:textColor="#555555"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText"
+                tools:targetApi="o" />
+
+            <LinearLayout
+                android:padding="@dimen/dp5"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/string_sales"
+                    android:textColor="#555555"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+                <TextView
+                    android:id="@+id/new_text_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/zero"
+                    android:textColor="@color/appthemeColor"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/string_single"
+                    android:textColor="#555555"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="visible"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/string_yeratoday_add"
+                    android:textColor="#555555"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/new_text_day_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="0"
+                    android:textColor="@color/appthemeColor"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:lines="1"
+                    android:text="@string/string_single"
+                    android:textColor="#555555"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/new_hot_title_rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>
